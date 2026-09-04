@@ -1,0 +1,34 @@
+{
+  "id": 1001,
+  "title": "Customer Onboarding & CME Profile Validation",
+  "state": "Active",
+  "description": "As a CME Operations Officer, I need to create and validate commercial corporate accounts so that onboarding compliance criteria are verified.",
+  "acceptanceCriteria": "Corporate account number must follow ISO-13616 standard formatting.\n\nPrimary contact email must belong to an authorized enterprise domain.\n\nRisk rating must default to \"Medium\" unless high-risk jurisdiction flags are triggered.\n\nAccount status must transition from \"Pending\" to \"Approved\" upon validation.",
+  "linkedTestCases": [
+    {
+      "id": 2001,
+      "title": "Verify successful corporate account creation with standard risk profile",
+      "state": "Design",
+      "description": "Validates that submitting standard corporate credentials creates a persistent CME account.",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "action": "Navigate to Customer Onboarding dashboard",
+          "expectedResult": "Dashboard loads with Create Account button enabled"
+        },
+        {
+          "stepNumber": 2,
+          "action": "Enter corporate entity details and business registration number",
+          "expectedResult": "Entity details accepted without validation errors"
+        },
+        {
+          "stepNumber": 3,
+          "action": "Submit the registration form",
+          "expectedResult": "Success toast is displayed and Account ID is generated"
+        }
+      ],
+      "url": "https://dev.azure.com/enterprise-org/CoreBanking-CME/_workitems/edit/2001"
+    }
+  ],
+  "url": "https://dev.azure.com/enterprise-org/CoreBanking-CME/_workitems/edit/1001"
+}

@@ -1,0 +1,24 @@
+{
+  "id": 2001,
+  "title": "Verify CME Corporate Account Creation",
+  "state": "Ready",
+  "description": "End-to-end verification of corporate onboarding flow via CME web portal.",
+  "steps": [
+    {
+      "stepNumber": 1,
+      "action": "Log in using StandardUser credentials and navigate to CME Account module",
+      "expectedResult": "User lands on CME Account Management home view with Active status"
+    },
+    {
+      "stepNumber": 2,
+      "action": "Click \"+ New Corporate Customer\" button and enter valid company registration details",
+      "expectedResult": "Form validates company fields, tax ID, and address correctly"
+    },
+    {
+      "stepNumber": 3,
+      "action": "Select Risk Level \"Standard\" and click Submit",
+      "expectedResult": "System returns generated Account Reference ID with Pending Approval status"
+    }
+  ],
+  "url": "https://dev.azure.com/enterprise-org/CoreBanking-CME/_workitems/edit/2001"
+}

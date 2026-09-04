@@ -1,0 +1,49 @@
+{
+  "name": "playwright-bdd-ai-framework",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Enterprise Playwright-BDD test automation framework with AES-256 encryption, Azure DevOps API integration, and AI agent extensions",
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:CME": "bddgen && playwright test --project=CME",
+    "ui": "bddgen && playwright test --ui",
+    "headed": "bddgen && playwright test --headed",
+    "test:serial": "bddgen && playwright test --workers=1",
+    "test:auth": "bddgen && playwright test --project=authCheck",
+    "azure:check": "tsx src/azure/checkConnection.ts",
+    "azure:audit": "tsx src/azure/coverageAudit.ts",
+    "azure:encrypt": "tsx src/azure/encryptValue.ts",
+    "agent:testcase": "tsx src/azure/fetchTestCaseContext.ts",
+    "agent:feature": "tsx src/azure/fetchFeatureContext.ts",
+    "report": "node test-results/HSBC-AT-Report/build.mjs",
+    "report:open": "node test-results/HSBC-AT-Report/build.mjs && node test-results/HSBC-AT-Report/serve.mjs",
+    "report:cucumber": "node report.js && node server.js",
+    "report:native": "playwright show-report test-results/playwright-report",
+    "install:browsers": "playwright install chrome"
+  },
+  "keywords": [
+    "playwright",
+    "bdd",
+    "cucumber",
+    "typescript",
+    "azure-devops",
+    "enterprise-automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "1.50.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multiple-cucumber-html-reporter": "^3.9.2",
+    "playwright-bdd": "^8.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
